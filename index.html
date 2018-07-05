@@ -1,51 +1,78 @@
 <html>
-<head>
-
-  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-  <title>ASO Tool by Growth Science Team</title>
-  <center><img src="newlogo.png?noresize" width="340"></center>
-
-<link rel="icon" href="favicon.png" type="img/png" sizes="32x32">
+  <head>
+      <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <title>ASO Tool by Growth Science Team</title>
+            <link rel="icon" href="favicon.png" type="img/png" sizes="32x32">
+              <meta charset="utf-8">
+              <title>Country Select JS</title>
+              <link rel="stylesheet" href="build/css/countrySelect.css">
+              <link rel="stylesheet" href="build/css/demo.css">
 
 <style>
+    .alignRight {
+        float: right;
+    }
+        body {
+            background-color:363457
+        }
 
-  body {
-      background-color:363457
-  }
+        body {
+            font-family: 'Roboto';font-size: 22px;
+        }
 
-  body {
-      font-family: 'Roboto';font-size: 22px;
-  }
-
-  .iframe-container {
-    width: 904px;
-    height: 808px;
-    overflow: hidden;
-  }
-  .iframe-container iframe {
-    overflow: hidden;
-    transform: translate(-48px, -150px);
-  }
-
+        .iframe-container {
+          width: 904px;
+          height: 808px;
+          overflow: hidden;
+        }
+        .iframe-container iframe {
+          overflow: hidden;
+          transform: translate(-48px, -150px);
+        }
 </style>
 
-<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="72098289-a6d7-4ce6-a26f-f16451e5701d";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
-
-</script>
-
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="72098289-a6d7-4ce6-a26f-f16451e5701d";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+      </script>
 </head>
 
+  <body>
+      <table style="width: 100%;">
+      <tr><td><center><img src="newlogo.png?noresize" width="340"></center></td>
+  </body>
 <body>
+  <td class="alignRight">
+                    <form>
+                      <div class="form-item">
+                        <input id="country_selector" type="text">
+                        <label for="country_selector" style="display:none;">Select a country here...</label>
+                      </div>
+                      <div class="form-item" style="display:none;">
+                        <input type="text" id="country_selector_code" name="country_selector_code" data-countrycodeinput="1" readonly="readonly" placeholder="Selected country code will appear here" />
+                        <label for="country_selector_code">...and the selected country code will be updated here</label>
+                      </div>
+                      <button type="submit" style="display:none;">Submit</button>
+                    </form>
+                  </span>
+                <!-- Load jQuery from CDN so can run demo immediately -->
+                      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+                      <script src="build/js/countrySelect.js"></script>
+                      <script>
+                        $("#country_selector").countrySelect({
+                          //defaultCountry: "jp",
+                          //onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+                          preferredCountries: ['us', 'mx', 'jp']
+                        });
+                  </script></center>
+      </td></tr>
+      </table>
+</body>
 
-  <center>
-
-  <div class="iframe-container">
-  <iframe height="1628"src="https://docs.google.com/spreadsheets/d/15HybpW-lrLgO_y0mEZHgqlHij9NYoWW63un2A9mM5ps/edit?usp=sharing;headers=false" scrolling="no" width="1094px" frameborder="2"></iframe></div>
-<p>
-    <a href="https://myaccount.google.com/"target="_blank"><img width="205" src="google.png"></a>
-</p>
-  </center>
-
+  <p>
+    <center><div class="iframe-container">
+      <iframe height="1628"src="https://docs.google.com/spreadsheets/d/15HybpW-lrLgO_y0mEZHgqlHij9NYoWW63un2A9mM5ps/edit?usp=sharing;headers=false" scrolling="no" width="1094px" frameborder="2"></iframe></div>
+  </p>
+      <p><a href="https://myaccount.google.com/"target="_blank"><img width="205" src="google.png"></a>
+        </p></center>
 </body>
 
 </html>
